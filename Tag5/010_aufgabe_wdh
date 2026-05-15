@@ -1,0 +1,127 @@
+# =========================================
+# ÜBUNG: DAS CHAOS IM NERD-LABOR 
+# =========================================
+
+# Der verrückte Professor Byte hat sein Gamer-Labor zerstört.
+# Jetzt laufen überall Roboterkatzen, Drachen-Drohnen
+# und kaputte Konsolen herum.
+
+# Deine Mission:
+# Nutze Listen, Tupel, for-Schleifen und while-Schleifen,
+# um das Labor wieder unter Kontrolle zu bringen.
+
+
+# =========================================
+# TEIL 1 – DAS INVENTAR 
+# =========================================
+
+inventar = ["Lasermaus", "Energydrink", "Gaming-Tastatur", "USB-Schwert"]
+
+# Aufgaben:
+# 1. Gib das komplette Inventar aus.
+print(inventar)
+# 2. Gib nur das erste Item aus.
+print(inventar[0])
+# 3. Füge "Programmier-Socken" zur Liste hinzu.
+inventar.append("Programmier-Socken")
+# 4. Gib die Länge der Liste aus.
+print(len(inventar))
+
+
+# =========================================
+# TEIL 2 – DIE SICHERHEITSCODES 
+# =========================================
+
+koordinaten = (42, 77)
+
+# Aufgaben:
+# 1. Gib beide Werte einzeln aus.
+print(koordinaten[0])
+print(koordinaten[1])
+# 2. Versuche testweise den ersten Wert zu ändern.
+# 3. Beobachte den Fehler. 
+try:                            # try -> versuche den folgenden Code auszuführen
+    koordinaten[0] = 99         # Das geht so nicht!
+except TypeError as fehler:     # except -> falls es schiefgeht, mache stattdessen das hier | TypeError -> Fehlerart | fehler -> speichert die Fehlermeldung in der Variable fehler
+    print("Fehler:", fehler)    # Ausgabe unserer Fehlermeldung.
+# try/except -> Schützt unser Programm davor, direkt abzustürzen.
+# 4. Schreibe als Kommentar dazu, WARUM der Fehler entsteht.
+## Fehler entsteht, weil Tupel UNVERÄNDERLICH sind!
+
+
+
+# =========================================
+# TEIL 3 – DIE ROBOTER ZÄHLEN 
+# =========================================
+
+# Aufgabe:
+# Nutze eine for-Schleife, damit folgendes ausgegeben wird:
+#
+# Roboter 1 aktiviert!
+# Roboter 2 aktiviert!
+# Roboter 3 aktiviert!
+# Roboter 4 aktiviert!
+# Roboter 5 aktiviert!
+
+for i in range(5):
+    print("Roboter", i + 1, "aktiviert!")
+
+
+# =========================================
+# TEIL 4 – DER BOSSKAMPF 
+# =========================================
+
+# Der Endboss "Bugzilla" hat 20 Lebenspunkte.
+
+# Aufgaben:
+# 1. Erstelle eine Variable leben = 20
+leben = 20
+# 2. Nutze eine while-Schleife.
+# 3. Bei jedem Angriff verliert Bugzilla 5 Leben.
+# 4. Gib nach jedem Treffer die restlichen Lebenspunkte aus.
+# 5. Wenn der Boss besiegt ist, soll erscheinen:
+#
+# Bugzilla wurde besiegt!
+while leben > 0:
+    leben -= 5
+    print("Bugzilla hat 5 Leben verloren. Verbleibende Lebenspunkte:", leben)
+print("Bugzilla wurde besiegt!")
+
+
+
+# =========================================
+# BONUS-MISSION 
+# =========================================
+
+# Erstelle eine Liste mit mindestens 5 Lieblingsgames,
+# Serien oder Anime.
+
+# Nutze anschließend eine for-Schleife,
+# um alles auszugeben.
+#
+# Beispiel:
+# Ich feiere: Zelda
+# Ich feiere: One Piece
+
+liste = []
+liste.append("EU5")
+liste.append("EU4")
+liste.append("Queen's Gambit")
+liste.append("HotS")
+liste.append("Schach")
+for item in liste:
+    print("Ich feiere:", item)
+
+
+# =========================================
+# EXTRA-CHALLENGE FÜR NERD-LEGENDEN 
+# =========================================
+
+# Kombiniere alles:
+#
+# - Eine Liste mit Gegnern
+# - Eine for-Schleife für die Gegner
+# - Eine while-Schleife für Lebenspunkte
+# - Ein Tupel mit geheimen Koordinaten
+#
+# Und baue daraus ein kleines Mini-Game.
