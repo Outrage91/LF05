@@ -1,0 +1,24 @@
+import rechner          # import rechner bedeutet dass Python jetzt nach einer Datei names rechner.py sucht
+                        # -> wenn es rechner.py gefunden hat -> macht Python deren Inhalt in der main.py verfügbar
+                        
+ergebnis = rechner.addieren(5, 3)   # rechner.addieren -> wir sagen Python dass es die Funktion addieren aus der Datei rechner.py verwenden soll.
+# rechner.addieren -> rechner steht für die Datei rechner.py + Funktion addieren in dieser Datei
+# (5, 3) -> Argumente die die Parameter a und b in der Funktion addieren zugewiesen werden
+
+print(ergebnis)    # Ausgabe: 8
+
+#Variante 2:
+ergebnis = rechner.addieren(58, 33)
+print(ergebnis)    # Ausgabe: 91
+
+#Variante 3
+ergebnis = rechner.addieren(75,93)
+print(ergebnis)    # Ausgabe: 168
+
+#Variante 4
+ergebnis = rechner.addieren(8, 121)
+print(ergebnis)    # Ausgabe: 129
+
+#Variante 5
+ergebnis = rechner.addieren(89, 147)
+print(ergebnis)    # Ausgabe: 236
